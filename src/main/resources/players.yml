@@ -1,0 +1,7 @@
+permission:
+  tick-count: 6000
+  title: "some title"
+  subtitle: "some subtitle"
+  fadeIn: 5
+  stay: 5
+  fadeOut: 5
