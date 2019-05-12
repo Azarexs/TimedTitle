@@ -78,6 +78,6 @@ public interface Configuration {
             public Holder<YamlConfiguration> getYaml() {
                 return yaml;
             }
-        };
+        }.create();
     }
 }

@@ -19,9 +19,9 @@ public class TitleRegistry {
                     final String subtitle = yaml.getString(key + ".subtitle");
                     final String permission = key;
 
-                    final int fadeIn = yaml.getInt(key + ".fadeIn");
-                    final int stay = yaml.getInt(key + ".stay");
-                    final int fadeOut = yaml.getInt(key + ".fadeOut");
+                    final int fadeIn = yaml.getInt(key + ".fadeIn") * 20;
+                    final int stay = yaml.getInt(key + ".stay") * 20;
+                    final int fadeOut = yaml.getInt(key + ".fadeOut") * 20;
                     final short time = (short) yaml.getInt(key + ".tick-count");
 
                     titles.put(time, new ScheduledTitle(title, subtitle, fadeIn, stay, fadeOut, permission));
