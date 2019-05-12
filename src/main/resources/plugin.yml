@@ -1,0 +1,6 @@
+name: TimedTitle
+version: ${project.version}
+main: me.azarex.timedtitle.TimedTitle
+api-version: 1.13
+authors: [Azarex]
+description: A plugin which sends titles depending on the in-game time and the permissions of the player
