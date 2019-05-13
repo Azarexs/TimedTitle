@@ -10,27 +10,27 @@ import org.bukkit.World;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public final class TimedTitle extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        ConfigurationService<String> configurations = new ConfigurationService<>();
+        final ConfigurationService<String> configurations = new ConfigurationService<>();
 
         configurations.register("config", Paths.get(getDataFolder().toPath() + File.separator + "config.yml"));
         configurations.register("players", Paths.get(getDataFolder().toPath() + File.separator + "players.yml"));
         configurations.register("lang", Paths.get(getDataFolder().toPath() + File.separator + "lang.yml"));
 
-        UserLoader userLoader = new UserLoader(configurations.getUnsafe("players"));
-        UserSessionManager sessionManager = new UserSessionManager(userLoader);
+        final UserLoader userLoader = new UserLoader(configurations.getUnsafe("players"));
+        final UserSessionManager sessionManager = new UserSessionManager(userLoader);
 
-        final World world = Bukkit.getWorld((String)configurations.getUnsafe("config").get("world"));
+        final World world = Bukkit.getWorld((String) configurations.getUnsafe("config").get("world"));
 
-        TitleRegistry titleRegistry = new TitleRegistry(configurations.getUnsafe("players"));
-        TitleExecutorService titleExecutorService = new TitleExecutorService(this, world, titleRegistry);
+        final TitleRegistry titleRegistry = new TitleRegistry(configurations.getUnsafe("players"));
+        final TitleExecutorService titleExecutorService = new TitleExecutorService(world, titleRegistry, userLoader);
 
+        Bukkit.getScheduler().runTaskTimer(this, titleExecutorService, 0L, 1L);
         Bukkit.getPluginManager().registerEvents(sessionManager, this);
     }
 }

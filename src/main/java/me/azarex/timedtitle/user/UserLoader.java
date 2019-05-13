@@ -10,12 +10,14 @@ import java.util.Map;
 
 import static java.lang.String.format;
 
+/**
+ * Loads and unloads users to the specified {@link Configuration}
+ */
 public class UserLoader {
 
+    private static final String ENABLED_PATH = "%s.enabled";
     private final Map<Player, User> users = new IdentityHashMap<>();
     private final Configuration configuration;
-
-    private static final String ENABLED_PATH = "%s.enabled";
 
     public UserLoader(Configuration configuration) {
         this.configuration = configuration;
@@ -23,6 +25,7 @@ public class UserLoader {
 
     /**
      * Loads {@link User}'s properties from a {@link Configuration}
+     *
      * @param player Player to be loaded from the {@link Configuration}
      */
     public void load(Player player) {
@@ -47,6 +50,7 @@ public class UserLoader {
 
     /**
      * Unloads and saves {@link User}'s properties to a {@link Configuration}
+     *
      * @param player Player to be saved to the {@link Configuration}
      */
     public void unload(Player player) {
@@ -59,6 +63,7 @@ public class UserLoader {
 
     /**
      * Gets the {@link User} from the online {@link Player}
+     *
      * @param player Player that is online
      * @return User that wraps a {@link Player}
      */

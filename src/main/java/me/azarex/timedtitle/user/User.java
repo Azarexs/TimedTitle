@@ -3,6 +3,10 @@ package me.azarex.timedtitle.user;
 import me.azarex.timedtitle.common.Holder;
 import org.bukkit.entity.Player;
 
+/**
+ * Represents a wrapped {@link Player}, with additional methods to assist in transferring
+ * data around
+ */
 public interface User {
 
     /**
