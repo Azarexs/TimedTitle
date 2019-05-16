@@ -8,7 +8,7 @@ e
 z
 Jsrc/main/java/me/azarex/timedtitle/configuration/ConfigurationService.java,6\9\690613140b9462dbe6948fa571145cd02b1b7a30
 b
-2src/main/java/me/azarex/timedtitle/TimedTitle.java,4\0\403b31edc3911f7bdb91ef49708ab760082a8c90
+2src/main/java/me/azarex/timedtitle/TimedTitle.java,4/0/403b31edc3911f7bdb91ef49708ab760082a8c90
 s
 Csrc/main/java/me/azarex/timedtitle/configuration/Configuration.java,0\8\08ad694a216af2bad96e5f9e3f725b58e8a09d5b
 g
@@ -17,3 +17,5 @@ a
 1src/main/java/me/azarex/timedtitle/user/User.java,8\5\8599a7ada6a666410dc465436295b449eab25624
 o
 ?src/main/java/me/azarex/timedtitle/user/UserSessionManager.java,1\8\18b09274386609bd1126f27922505505c2f9f65c
+>
+TimedTitle.iml,a/2/a202f8d5a4215a5d8fedb8f13bdd30274ed19a0c
